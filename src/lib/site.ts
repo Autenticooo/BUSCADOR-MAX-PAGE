@@ -4,26 +4,30 @@ export const site = {
   description:
     "O BUSCADOR MAX reúne os sinais que indicam quais produtos estão ganhando força no TikTok Shop — GVM Max, criadores, vídeos e MAX SCORE — para você encontrar oportunidades antes da maioria.",
   url: "https://buscadormax.com.br",
-  // ⬇️ Troque pelos links reais de checkout / área de membros.
-  checkoutUrl: "#planos",
+
+  // Checkout principal (CTA geral)
+  checkoutUrl: "https://pay.kiwify.com.br/Ej9NnLJ",
+
+  // Área de membros (alterar quando estiver pronta)
   loginUrl: "#planos",
+
   supportEmail: "suporte@buscadormax.com.br",
 } as const;
 
 export type PlanId = "mensal" | "semestral" | "anual";
 
 /**
- * Link de checkout de cada plano.
- * Enquanto não houver links individuais, todos caem no `site.checkoutUrl`.
- * Basta substituir por uma URL (Kiwify, Hotmart, Stripe...) para ativar.
+ * Links individuais de checkout por plano.
  */
 export const checkoutUrls: Record<PlanId, string> = {
-  mensal: site.checkoutUrl,
-  semestral: site.checkoutUrl,
-  anual: site.checkoutUrl,
+  mensal: "https://pay.kiwify.com.br/IT9crh4",
+  semestral: "https://pay.kiwify.com.br/ejHi2I1",
+  anual: "https://pay.kiwify.com.br/Ej9NnLJ",
 };
 
-/** Âncoras internas e destinos usados por todos os CTAs da página. */
+/**
+ * Âncoras internas e destinos usados pelos CTAs da página.
+ */
 export const links = {
   top: "#top",
   problem: "#problema",
@@ -35,6 +39,7 @@ export const links = {
   benefits: "#beneficios",
   pricing: "#planos",
   faq: "#faq",
+
   checkout: site.checkoutUrl,
   login: site.loginUrl,
   support: `mailto:${site.supportEmail}`,
