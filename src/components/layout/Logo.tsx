@@ -1,9 +1,10 @@
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/utils";
+import { links } from "@/lib/site";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <a href="#top" className={cn("group flex items-center gap-2.5", className)} aria-label="BUSCADOR MAX">
+    <a href={links.top} className={cn("group flex items-center gap-2.5", className)} aria-label="BUSCADOR MAX">
       <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[linear-gradient(135deg,#0ea5e9,#22d3ee_60%,#2563eb)] text-ink-950 shadow-[0_0_22px_-4px_rgba(34,211,238,0.8)]">
         <Icon name="search" size={17} strokeWidth={2.6} />
       </span>

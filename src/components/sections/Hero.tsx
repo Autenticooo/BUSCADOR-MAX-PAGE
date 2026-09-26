@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
+import { links } from "@/lib/site";
 import { DashboardMockup } from "@/components/mockups/DashboardMockup";
 import { CountryFlag } from "@/components/mockups/parts";
 
@@ -53,11 +54,17 @@ export function Hero() {
 
           <Reveal delay={220}>
             <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
-              <ButtonLink href="#planos" size="lg" className="w-full sm:w-auto">
+              <ButtonLink href={links.pricing} size="lg" className="w-full sm:w-auto" data-cta="hero-primario">
                 Começar agora
                 <Icon name="arrow" size={18} className="transition-transform group-hover:translate-x-1" />
               </ButtonLink>
-              <ButtonLink href="#como-funciona" size="lg" variant="secondary" className="w-full sm:w-auto">
+              <ButtonLink
+                href={links.howItWorks}
+                size="lg"
+                variant="secondary"
+                className="w-full sm:w-auto"
+                data-cta="hero-secundario"
+              >
                 <Icon name="play" size={15} />
                 Ver como funciona
               </ButtonLink>

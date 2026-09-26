@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
-import { navLinks, site } from "@/lib/site";
+import { links, navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -34,7 +34,7 @@ export function Navbar() {
           : "border-b border-transparent",
       )}
     >
-      <nav className="container-max flex h-[72px] items-center justify-between gap-4">
+      <nav className="container-max flex h-[72px] items-center justify-between gap-3 xl:gap-4">
         <Logo />
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -42,21 +42,22 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-lg px-3 py-2 text-[0.83rem] font-medium text-slate-400 transition-colors hover:bg-white/[0.04] hover:text-white"
+              className="rounded-lg px-2.5 py-2 text-[0.8rem] font-medium text-slate-400 transition-colors hover:bg-white/[0.04] hover:text-white xl:px-3 xl:text-[0.83rem]"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2.5 lg:flex xl:gap-3">
           <a
-            href={site.loginUrl}
+            href={links.login}
+            data-cta="navbar-login"
             className="text-[0.83rem] font-medium text-slate-300 transition-colors hover:text-white"
           >
             Entrar
           </a>
-          <ButtonLink href="#planos" size="sm">
+          <ButtonLink href={links.pricing} size="sm" data-cta="navbar-desktop">
             Começar agora
             <Icon name="arrow" size={15} className="transition-transform group-hover:translate-x-0.5" />
           </ButtonLink>
@@ -91,7 +92,12 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <ButtonLink href="#planos" className="mt-2 w-full" onClick={() => setOpen(false)}>
+          <ButtonLink
+            href={links.pricing}
+            className="mt-2 w-full"
+            data-cta="navbar-mobile"
+            onClick={() => setOpen(false)}
+          >
             Começar agora
             <Icon name="arrow" size={16} />
           </ButtonLink>

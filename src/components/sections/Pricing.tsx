@@ -2,7 +2,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { ButtonLink } from "@/components/ui/Button";
-import { site } from "@/lib/site";
+import { checkoutUrls, type PlanId } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const benefits = [
@@ -16,7 +16,7 @@ const benefits = [
 ];
 
 type Plan = {
-  id: string;
+  id: PlanId;
   name: string;
   price: string;
   period: string;
@@ -238,11 +238,12 @@ export function Pricing() {
 
                 <div className="relative z-[2] mt-8">
                   <ButtonLink
-                    href={site.checkoutUrl}
+                    href={checkoutUrls[plan.id]}
                     variant={plan.featured ? "primary" : "secondary"}
                     size="lg"
                     className="w-full"
                     data-plan={plan.id}
+                    data-cta={`plano-${plan.id}`}
                   >
                     Assinar agora
                     <Icon name="arrow" size={17} className="transition-transform group-hover:translate-x-1" />

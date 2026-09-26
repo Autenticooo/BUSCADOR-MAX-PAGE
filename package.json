@@ -2,6 +2,10 @@
   "name": "buscador-max-page",
   "version": "0.1.0",
   "private": true,
+  "description": "Landing page de vendas do BUSCADOR MAX — inteligência de produtos para TikTok Shop.",
+  "engines": {
+    "node": ">=20.9"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +28,5 @@
     "eslint-config-next": "16.3.6",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "description": "Landing page de vendas do BUSCADOR MAX — inteligência de produtos para TikTok Shop."
+  }
 }

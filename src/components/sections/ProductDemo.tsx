@@ -162,6 +162,7 @@ export function ProductDemo() {
             title="Essas telas trabalham por você todos os dias."
             text="Em vez de garimpar vídeo por vídeo, você abre a plataforma e o panorama já está pronto."
             cta="Assinar e acessar agora"
+            id="plataforma"
           />
         </div>
       </div>

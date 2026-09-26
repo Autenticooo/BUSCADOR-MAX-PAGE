@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
-import { site } from "@/lib/site";
+import { links } from "@/lib/site";
 
 export function FinalCta() {
   return (
@@ -34,7 +34,7 @@ export function FinalCta() {
               </p>
 
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <ButtonLink href={site.checkoutUrl} size="lg" className="w-full sm:w-auto">
+                <ButtonLink href={links.checkout} size="lg" className="w-full sm:w-auto" data-cta="cta-final">
                   Entrar no BUSCADOR MAX
                   <Icon name="arrow" size={18} className="transition-transform group-hover:translate-x-1" />
                 </ButtonLink>

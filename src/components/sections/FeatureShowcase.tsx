@@ -154,6 +154,7 @@ export function FeatureShowcase() {
           title="Uma ferramenta de inteligência de produtos, não uma lista pronta."
           text="Você entra, filtra pelo seu recorte e encontra as oportunidades com os sinais na mesa."
           cta="Começar agora"
+          id="recursos"
         />
       </div>
     </section>

@@ -53,10 +53,12 @@ npx netlify-cli deploy --prod --dir=out
 
 ## O que editar primeiro
 
-| O que                                  | Onde                                   |
-| -------------------------------------- | -------------------------------------- |
-| Links de checkout, login, e-mail, URL  | `src/lib/site.ts`                      |
-| Itens do menu                          | `src/lib/site.ts` (`navLinks`)         |
+| O que                                     | Onde                                   |
+| ----------------------------------------- | -------------------------------------- |
+| Links de checkout, login, e-mail, URL     | `src/lib/site.ts`                      |
+| Link de checkout por plano                | `src/lib/site.ts` (`checkoutUrls`)     |
+| Âncoras usadas pelos CTAs                 | `src/lib/site.ts` (`links`)            |
+| Itens do menu                             | `src/lib/site.ts` (`navLinks`)         |
 | Preços, etiquetas e benefícios         | `src/components/sections/Pricing.tsx`  |
 | Perguntas do FAQ                       | `src/components/sections/Faq.tsx`      |
 | Produtos, países e categorias dos mockups | `src/data/products.ts`              |
@@ -64,7 +66,24 @@ npx netlify-cli deploy --prod --dir=out
 
 > **Checkout:** em `src/lib/site.ts`, troque `checkoutUrl` e `loginUrl` pelos links reais
 > (Kiwify, Hotmart, Stripe, área de membros etc.). Todos os botões "Assinar agora" e
-> "Entrar no BUSCADOR MAX" já apontam para essas constantes.
+> "Entrar no BUSCADOR MAX" já apontam para essas constantes. Para links diferentes por plano,
+> preencha `checkoutUrls.mensal`, `checkoutUrls.semestral` e `checkoutUrls.anual`.
+> Links que começarem com `http` recebem `rel="noopener noreferrer"` automaticamente.
+
+### Rastreamento de conversão
+
+Nenhum CTA usa href solto: todos vêm de `src/lib/site.ts`. Além disso, cada botão carrega
+atributos de rastreamento prontos para GTM/GA4/Meta Pixel:
+
+- `data-plan="mensal" | "semestral" | "anual"` — apenas nos três botões "Assinar agora".
+- `data-cta="..."` — em todos os CTAs, identificando a origem do clique:
+  `hero-primario`, `hero-secundario`, `navbar-desktop`, `navbar-mobile`, `navbar-login`,
+  `antes-depois`, `solucao`, `solucao-secundario`, `como-funciona`, `plataforma`, `recursos`,
+  `beneficios`, `plano-mensal`, `plano-semestral`, `plano-anual`, `cta-final`,
+  `sticky-mobile`, `footer`.
+
+Exemplo de disparo no GTM: gatilho de clique em `[data-cta]`, enviando `{{Click Element}}`
+→ `data-cta` e `data-plan` como parâmetros do evento.
 
 ---
 
@@ -109,6 +128,19 @@ src/
 12. **CTA final** — "Pare de procurar oportunidades no escuro."
 
 ---
+
+## Checklist de qualidade (validado nesta versão)
+
+- `npm run lint`, `npm run typecheck` e `npm run build` sem erros ou avisos.
+- `npm ci` reproduz o `package-lock.json` (mesmo comando usado pelo Netlify).
+- Todos os CTAs apontam para constantes de `src/lib/site.ts`; todas as âncoras (`#antes-depois`,
+  `#como-funciona`, `#plataforma`, `#recursos`, `#planos`, `#faq`, `#top`) existem na página.
+- Layout responsivo: nenhum grid multicoluna sem fallback mobile; a tabela de produtos usa
+  rolagem horizontal própria; nada gera scroll horizontal no `body`.
+- Telas do app sempre com o selo "Demonstração" e legenda de dados ilustrativos.
+- Sem promessa de resultado garantido no texto; aviso legal no rodapé.
+- Saída estática servida e testada (`/`, `/robots.txt`, `/sitemap.xml`, `/icon.svg`,
+  `/opengraph-image`, `404.html`).
 
 ## Decisões técnicas
 

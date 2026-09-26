@@ -219,9 +219,9 @@ export function WindowChrome({ path }: { path: string }) {
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
       </div>
-      <div className="mx-auto hidden items-center gap-2 rounded-md border border-white/[0.07] bg-ink-950/60 px-3 py-1 text-[0.66rem] text-slate-500 sm:flex">
-        <Icon name="lock" size={10} />
-        app.buscadormax.com/{path}
+      <div className="mx-auto hidden max-w-[55%] items-center gap-2 rounded-md border border-white/[0.07] bg-ink-950/60 px-3 py-1 text-[0.66rem] text-slate-500 sm:flex">
+        <Icon name="lock" size={10} className="shrink-0" />
+        <span className="truncate">app.buscadormax.com/{path}</span>
       </div>
       <div className="ml-auto flex items-center gap-2">
         <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-1.5 py-0.5 text-[0.5rem] font-semibold uppercase tracking-[0.14em] text-slate-500">

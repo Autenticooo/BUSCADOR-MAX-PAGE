@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/utils";
+import { links } from "@/lib/site";
 
 export function StickyCta() {
   const [show, setShow] = useState(false);
@@ -36,7 +37,7 @@ export function StickyCta() {
           <p className="truncate text-[0.78rem] font-semibold text-white">Acesso a partir de R$10/mês</p>
           <p className="truncate text-[0.68rem] text-slate-500">Mesmos benefícios em todos os planos</p>
         </div>
-        <ButtonLink href="#planos" size="sm" className="shrink-0">
+        <ButtonLink href={links.pricing} size="sm" className="shrink-0" data-cta="sticky-mobile">
           Começar agora
           <Icon name="arrow" size={14} />
         </ButtonLink>

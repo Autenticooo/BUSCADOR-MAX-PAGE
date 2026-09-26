@@ -32,10 +32,20 @@ export function ButtonLink({
   size = "md",
   className,
   children,
+  href,
+  rel,
   ...props
 }: ButtonLinkProps) {
+  // Links externos (checkout, área de membros) recebem rel de segurança automaticamente.
+  const isExternal = typeof href === "string" && /^https?:\/\//.test(href);
+
   return (
-    <a className={cn(base, variants[variant], sizes[size], className)} {...props}>
+    <a
+      href={href}
+      rel={rel ?? (isExternal ? "noopener noreferrer" : undefined)}
+      className={cn(base, variants[variant], sizes[size], className)}
+      {...props}
+    >
       {children}
     </a>
   );

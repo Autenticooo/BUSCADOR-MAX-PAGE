@@ -79,6 +79,7 @@ export function HowItWorks() {
             title="Todo dia a análise acontece. Basta você abrir e usar."
             text="Enquanto outros ainda estão procurando, você começa o dia com as oportunidades já organizadas."
             cta="Começar agora"
+            id="como-funciona"
           />
         </div>
       </div>

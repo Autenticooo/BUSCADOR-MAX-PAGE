@@ -206,6 +206,7 @@ export function BeforeAfter() {
             title="Você já faz o trabalho pesado. Falta a camada de inteligência."
             text="Comece a analisar produtos com sinais organizados em vez de tentativa e erro."
             cta="Entrar no BUSCADOR MAX"
+            id="antes-depois"
           />
         </div>
       </div>

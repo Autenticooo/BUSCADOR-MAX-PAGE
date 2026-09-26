@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { navLinks, site } from "@/lib/site";
+import { links, navLinks, site } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -41,14 +41,14 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-[0.88rem] text-slate-500">
               <li>
                 <a
-                  href={`mailto:${site.supportEmail}`}
+                  href={links.support}
                   className="transition-colors hover:text-brand-300"
                 >
                   {site.supportEmail}
                 </a>
               </li>
               <li>
-                <a href="#planos" className="transition-colors hover:text-brand-300">
+                <a href={links.pricing} data-cta="footer" className="transition-colors hover:text-brand-300">
                   Assinar agora
                 </a>
               </li>

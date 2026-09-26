@@ -81,7 +81,7 @@ export function Solution() {
         </div>
 
         <Reveal delay={120}>
-          <InlineCta label="Quero usar o BUSCADOR MAX" />
+          <InlineCta label="Quero usar o BUSCADOR MAX" id="solucao" />
         </Reveal>
       </div>
     </section>
