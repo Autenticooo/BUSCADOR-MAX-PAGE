@@ -11,8 +11,7 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { label: "O problema", href: "#problema" },
-  { label: "A solução", href: "#solucao" },
+  { label: "Antes vs Depois", href: "#antes-depois" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Plataforma", href: "#plataforma" },
   { label: "Recursos", href: "#recursos" },

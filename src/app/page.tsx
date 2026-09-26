@@ -4,6 +4,7 @@ import { StickyCta } from "@/components/layout/StickyCta";
 import { Hero } from "@/components/sections/Hero";
 import { SignalTicker } from "@/components/sections/SignalTicker";
 import { Problem } from "@/components/sections/Problem";
+import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Solution } from "@/components/sections/Solution";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ProductDemo } from "@/components/sections/ProductDemo";
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <SignalTicker />
         <Problem />
+        <BeforeAfter />
         <Solution />
         <HowItWorks />
         <ProductDemo />

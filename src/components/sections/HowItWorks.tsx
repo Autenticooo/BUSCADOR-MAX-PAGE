@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon, type IconName } from "@/components/ui/Icon";
-import { ButtonLink } from "@/components/ui/Button";
+import { CtaBand } from "@/components/ui/CtaBand";
 
 const steps: { icon: IconName; title: string; text: string; tag: string }[] = [
   {
@@ -74,14 +74,13 @@ export function HowItWorks() {
           </div>
         </div>
 
-        <Reveal delay={120}>
-          <div className="mt-12 flex justify-center">
-            <ButtonLink href="#planos" size="lg">
-              Começar agora
-              <Icon name="arrow" size={18} className="transition-transform group-hover:translate-x-1" />
-            </ButtonLink>
-          </div>
-        </Reveal>
+        <div className="mt-14">
+          <CtaBand
+            title="Todo dia a análise acontece. Basta você abrir e usar."
+            text="Enquanto outros ainda estão procurando, você começa o dia com as oportunidades já organizadas."
+            cta="Começar agora"
+          />
+        </div>
       </div>
     </section>
   );

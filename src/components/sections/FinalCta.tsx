@@ -38,7 +38,7 @@ export function FinalCta() {
                   Entrar no BUSCADOR MAX
                   <Icon name="arrow" size={18} className="transition-transform group-hover:translate-x-1" />
                 </ButtonLink>
-                <span className="text-[0.82rem] text-slate-400">A partir de R$19/mês</span>
+                <span className="text-[0.82rem] text-slate-400">A partir de R$10/mês no plano anual</span>
               </div>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[0.8rem] text-slate-400">

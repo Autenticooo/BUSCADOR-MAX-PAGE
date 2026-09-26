@@ -8,6 +8,7 @@ import { DashboardMockup } from "@/components/mockups/DashboardMockup";
 import { ProductTableMockup } from "@/components/mockups/ProductTableMockup";
 import { RankingMockup } from "@/components/mockups/RankingMockup";
 import { ProductDetailMockup } from "@/components/mockups/ProductDetailMockup";
+import { CtaBand } from "@/components/ui/CtaBand";
 import { cn } from "@/lib/utils";
 
 type Tab = {
@@ -149,7 +150,19 @@ export function ProductDemo() {
               </div>
             </div>
             <p className="mt-4 text-[0.88rem] text-slate-400 lg:hidden">{current.caption}</p>
+            <p className="mt-3 text-[0.72rem] text-slate-600">
+              Telas demonstrativas da interface. Os produtos e valores exibidos são exemplos de como a
+              análise aparece dentro da plataforma.
+            </p>
           </Reveal>
+        </div>
+
+        <div className="mt-12">
+          <CtaBand
+            title="Essas telas trabalham por você todos os dias."
+            text="Em vez de garimpar vídeo por vídeo, você abre a plataforma e o panorama já está pronto."
+            cta="Assinar e acessar agora"
+          />
         </div>
       </div>
     </section>

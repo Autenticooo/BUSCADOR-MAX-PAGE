@@ -97,14 +97,16 @@ src/
 1. **Hero** — headline, CTAs e mockup de dashboard (produtos, métricas, ranking, MAX SCORE)
 2. **Números + ticker de sinais** — base monitorada e produtos em movimento
 3. **Problema** — as 4 dores + narrativa "falta inteligência de dados, não esforço"
-4. **Solução** — 6 cards: Produto em escala, GVM Max, Criadores, Vídeos, MAX SCORE, Link TikTok Shop
-5. **Como funciona** — 3 passos
-6. **Demonstração interativa** — abas: Dashboard, Tabela de produtos, Ranking MAX SCORE e Página do produto
-7. **Recursos** — filtros por categoria/país, cards de oportunidade e grade de capacidades
-8. **Benefícios** — 5 cards
-9. **Planos** — Mensal R$19/mês, Semestral R$79 (Mais escolhido), Anual R$120 (Melhor valor)
-10. **FAQ** — acordeão com 4 perguntas
-11. **CTA final** — "Pare de procurar oportunidades no escuro."
+4. **Antes vs Depois** — contraste entre procurar no escuro e decidir com sinais (+ comparativo por dimensão)
+5. **Solução** — 6 cards: Produto em escala, GVM Max, Criadores, Vídeos, MAX SCORE, Link TikTok Shop
+6. **Como funciona** — 3 passos
+7. **Demonstração interativa** — abas: Dashboard, Tabela de produtos, Ranking MAX SCORE e Página do produto
+8. **Recursos** — filtros por categoria/país, cards de oportunidade e grade de capacidades
+9. **Benefícios** — 5 cards
+10. **Planos** — foco em período e economia: Mensal R$19, Semestral R$79 (Mais escolhido), Anual R$120
+    (Melhor valor), com custo por mês, barra de economia e comparativo — mesmos benefícios nos três
+11. **FAQ** — acordeão com 5 perguntas
+12. **CTA final** — "Pare de procurar oportunidades no escuro."
 
 ---
 
@@ -115,6 +117,10 @@ src/
 - **Fontes self-hosted** (pacote `geist`): sem requisições ao Google Fonts, sem layout shift.
 - **Animações de entrada** via `IntersectionObserver` (componente `Reveal`), sem bibliotecas extras —
   e respeitando `prefers-reduced-motion`.
-- **Conversão**: CTA no topo, ao longo da página, CTA fixo no mobile após o hero e CTA final.
+- **Conversão**: CTA no hero, faixas de CTA ao final de cada bloco de argumentação (`ui/CtaBand.tsx`),
+  CTA fixo no mobile após o hero e CTA final.
+- **Transparência**: as telas trazem o selo "Demonstração" e legendas indicando que os produtos e
+  valores exibidos são exemplos ilustrativos da interface — nenhum número é vendido como métrica
+  auditada da plataforma.
 - **SEO**: metadata completa em pt-BR, Open Graph gerado no build, JSON-LD de `SoftwareApplication`
   com os três planos, `robots.txt` e `sitemap.xml`.

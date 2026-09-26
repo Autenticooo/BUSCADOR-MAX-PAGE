@@ -24,7 +24,13 @@ export const faqs = [
   },
   {
     question: "Todos os planos possuem os mesmos benefícios?",
-    answer: "Sim. A diferença está apenas no período contratado.",
+    answer:
+      "Sim. A diferença está apenas no período contratado — e, quanto maior o período, menor o custo por mês.",
+  },
+  {
+    question: "As telas mostradas nesta página são a plataforma?",
+    answer:
+      "Sim, são a interface do BUSCADOR MAX. Os produtos e valores exibidos aqui são exemplos ilustrativos: dentro da plataforma você vê as oportunidades e os sinais atualizados.",
   },
 ];
 

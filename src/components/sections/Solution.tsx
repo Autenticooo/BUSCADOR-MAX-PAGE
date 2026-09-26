@@ -1,37 +1,38 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { InlineCta } from "@/components/ui/CtaBand";
 
 const features: { icon: IconName; title: string; text: string; metric: string }[] = [
   {
     icon: "flame",
     title: "Produto em escala",
     text: "Veja produtos que estão recebendo atenção e crescimento.",
-    metric: "+318% / 7d",
+    metric: "Tração",
   },
   {
     icon: "chart",
     title: "GVM Max",
     text: "Analise sinais de investimento e crescimento.",
-    metric: "R$ 412k",
+    metric: "Investimento",
   },
   {
     icon: "users",
     title: "Criadores",
     text: "Descubra quantas pessoas estão promovendo cada produto.",
-    metric: "1.284 ativos",
+    metric: "Prova social",
   },
   {
     icon: "video",
     title: "Vídeos",
     text: "Identifique produtos com movimentação real.",
-    metric: "6.720 vídeos",
+    metric: "Movimentação",
   },
   {
     icon: "zap",
     title: "MAX SCORE",
     text: "Tenha uma visão rápida do potencial da oportunidade.",
-    metric: "96 / 100",
+    metric: "Leitura rápida",
   },
   {
     icon: "link",
@@ -78,6 +79,10 @@ export function Solution() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={120}>
+          <InlineCta label="Quero usar o BUSCADOR MAX" />
+        </Reveal>
       </div>
     </section>
   );

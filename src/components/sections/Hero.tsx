@@ -70,10 +70,10 @@ export function Hero() {
                 <Icon name="check" size={14} className="text-lime" /> Acesso imediato
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Icon name="check" size={14} className="text-lime" /> Dados atualizados diariamente
+                <Icon name="check" size={14} className="text-lime" /> Produtos analisados diariamente
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Icon name="check" size={14} className="text-lime" /> A partir de R$19/mês
+                <Icon name="check" size={14} className="text-lime" /> A partir de R$10/mês no plano anual
               </span>
             </div>
           </Reveal>
@@ -92,8 +92,8 @@ export function Hero() {
           {/* Floating chips */}
           <div className="pointer-events-none absolute -left-3 top-24 hidden animate-float rounded-xl border border-neon/25 bg-ink-900/90 px-3 py-2 shadow-[0_18px_50px_-18px_rgba(34,211,238,0.6)] backdrop-blur xl:block">
             <p className="text-[0.6rem] uppercase tracking-wider text-slate-500">Sinal detectado</p>
-            <p className="mt-0.5 flex items-center gap-1.5 font-mono text-sm font-semibold text-neon">
-              <Icon name="flame" size={14} /> +318% em 7d
+            <p className="mt-0.5 flex items-center gap-1.5 text-sm font-semibold text-neon">
+              <Icon name="flame" size={14} /> Produto acelerando
             </p>
           </div>
           <div
@@ -101,8 +101,8 @@ export function Hero() {
             style={{ animationDelay: "1.4s" }}
           >
             <p className="text-[0.6rem] uppercase tracking-wider text-slate-500">MAX SCORE</p>
-            <p className="mt-0.5 flex items-center gap-1.5 font-mono text-sm font-semibold text-white">
-              <Icon name="zap" size={14} className="text-brand-300" /> 96 / 100
+            <p className="mt-0.5 flex items-center gap-1.5 text-sm font-semibold text-white">
+              <Icon name="zap" size={14} className="text-brand-300" /> Potencial em um número
             </p>
           </div>
           <div

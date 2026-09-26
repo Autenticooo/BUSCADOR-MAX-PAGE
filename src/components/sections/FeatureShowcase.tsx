@@ -3,6 +3,7 @@ import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { FiltersMockup } from "@/components/mockups/FiltersMockup";
 import { OpportunityCardsMockup } from "@/components/mockups/OpportunityCardsMockup";
+import { CtaBand } from "@/components/ui/CtaBand";
 import { cn } from "@/lib/utils";
 
 type Row = {
@@ -25,8 +26,8 @@ const rows: Row[] = [
     ),
     text: "Em vez de olhar tudo, você isola o recorte exato do seu negócio: o nicho que você já vende, o mercado onde você atua e a faixa de MAX SCORE que faz sentido testar.",
     bullets: [
-      { icon: "layers", label: "Categoria", text: "8 grandes nichos com contagem de produtos em cada um." },
-      { icon: "target", label: "País", text: "Brasil, EUA, Reino Unido, Espanha, México e outros mercados." },
+      { icon: "layers", label: "Categoria", text: "Selecione os nichos que fazem sentido para o seu negócio." },
+      { icon: "target", label: "País", text: "Analise o mercado onde você vende, sem ruído dos outros." },
       { icon: "zap", label: "Faixa de MAX SCORE", text: "Mostre apenas produtos acima do score que você define." },
       { icon: "clock", label: "Período", text: "Analise janelas de 24 horas, 7 dias ou 30 dias." },
     ],
@@ -62,7 +63,7 @@ const capabilities: { icon: IconName; label: string }[] = [
   { icon: "star", label: "Favoritos" },
   { icon: "link", label: "Link direto TikTok Shop" },
   { icon: "refresh", label: "Atualização diária" },
-  { icon: "database", label: "Base com 18.402 produtos" },
+  { icon: "database", label: "Base de produtos analisados" },
   { icon: "search", label: "Busca por nicho e criador" },
   { icon: "lock", label: "Área de membros" },
 ];
@@ -112,6 +113,9 @@ export function FeatureShowcase() {
                 />
                 {row.mockup}
               </div>
+              <p className="mt-3 text-center text-[0.72rem] text-slate-600">
+                Tela demonstrativa da interface do BUSCADOR MAX.
+              </p>
             </Reveal>
           </div>
         ))}
@@ -145,6 +149,12 @@ export function FeatureShowcase() {
             </div>
           </div>
         </Reveal>
+
+        <CtaBand
+          title="Uma ferramenta de inteligência de produtos, não uma lista pronta."
+          text="Você entra, filtra pelo seu recorte e encontra as oportunidades com os sinais na mesa."
+          cta="Começar agora"
+        />
       </div>
     </section>
   );

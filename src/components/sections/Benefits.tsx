@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { CtaBand } from "@/components/ui/CtaBand";
 
 const benefits: { icon: IconName; title: string; text: string }[] = [
   {
@@ -68,6 +69,15 @@ export function Benefits() {
               </article>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <CtaBand
+            title="Comece hoje com o mesmo acesso completo em qualquer plano."
+            text="Escolha só por quanto tempo quer manter a ferramenta — os recursos são idênticos."
+            cta="Ver planos"
+            note="Mensal R$19 · Semestral R$79 · Anual R$120"
+          />
         </div>
       </div>
     </section>

@@ -223,8 +223,10 @@ export function WindowChrome({ path }: { path: string }) {
         <Icon name="lock" size={10} />
         app.buscadormax.com/{path}
       </div>
-      <div className="ml-auto hidden items-center gap-2 sm:ml-0 sm:flex">
-        <span className="hidden text-[0.6rem] text-slate-600 lg:inline">⌘K</span>
+      <div className="ml-auto flex items-center gap-2">
+        <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-1.5 py-0.5 text-[0.5rem] font-semibold uppercase tracking-[0.14em] text-slate-500">
+          Demonstração
+        </span>
       </div>
     </div>
   );

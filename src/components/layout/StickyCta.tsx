@@ -33,8 +33,8 @@ export function StickyCta() {
     >
       <div className="flex items-center gap-3">
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[0.78rem] font-semibold text-white">Acesso a partir de R$19/mês</p>
-          <p className="truncate text-[0.68rem] text-slate-500">Todos os planos com os mesmos benefícios</p>
+          <p className="truncate text-[0.78rem] font-semibold text-white">Acesso a partir de R$10/mês</p>
+          <p className="truncate text-[0.68rem] text-slate-500">Mesmos benefícios em todos os planos</p>
         </div>
         <ButtonLink href="#planos" size="sm" className="shrink-0">
           Começar agora
