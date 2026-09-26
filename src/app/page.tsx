@@ -7,6 +7,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ProductDemo } from "@/components/sections/ProductDemo";
+import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
 import { Benefits } from "@/components/sections/Benefits";
 import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
@@ -23,6 +24,7 @@ export default function Home() {
         <Solution />
         <HowItWorks />
         <ProductDemo />
+        <FeatureShowcase />
         <Benefits />
         <Pricing />
         <Faq />

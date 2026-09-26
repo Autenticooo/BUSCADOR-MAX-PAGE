@@ -2,12 +2,15 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { DashboardMockup } from "@/components/mockups/DashboardMockup";
+import { CountryFlag } from "@/components/mockups/parts";
 
 const highlights = [
   { icon: "chart" as const, label: "GVM Max" },
   { icon: "users" as const, label: "Criadores" },
   { icon: "video" as const, label: "Vídeos" },
   { icon: "zap" as const, label: "MAX SCORE" },
+  { icon: "layers" as const, label: "Categoria" },
+  { icon: "target" as const, label: "País" },
 ];
 
 export function Hero() {
@@ -100,6 +103,17 @@ export function Hero() {
             <p className="text-[0.6rem] uppercase tracking-wider text-slate-500">MAX SCORE</p>
             <p className="mt-0.5 flex items-center gap-1.5 font-mono text-sm font-semibold text-white">
               <Icon name="zap" size={14} className="text-brand-300" /> 96 / 100
+            </p>
+          </div>
+          <div
+            className="pointer-events-none absolute -left-6 bottom-14 hidden animate-float rounded-xl border border-white/[0.12] bg-ink-900/90 px-3 py-2 shadow-[0_18px_50px_-18px_rgba(14,165,233,0.5)] backdrop-blur xl:block"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <p className="text-[0.6rem] uppercase tracking-wider text-slate-500">Filtro ativo</p>
+            <p className="mt-1 flex items-center gap-1.5 text-[0.72rem] font-medium text-white">
+              <CountryFlag code="BR" /> Brasil
+              <span className="text-slate-600">·</span>
+              <span className="text-slate-300">Beleza</span>
             </p>
           </div>
         </Reveal>

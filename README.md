@@ -59,7 +59,7 @@ npx netlify-cli deploy --prod --dir=out
 | Itens do menu                          | `src/lib/site.ts` (`navLinks`)         |
 | Preços, etiquetas e benefícios         | `src/components/sections/Pricing.tsx`  |
 | Perguntas do FAQ                       | `src/components/sections/Faq.tsx`      |
-| Produtos/métricas exibidos nos mockups | `src/data/products.ts`                 |
+| Produtos, países e categorias dos mockups | `src/data/products.ts`              |
 | Paleta, animações e utilitários        | `src/app/globals.css`                  |
 
 > **Checkout:** em `src/lib/site.ts`, troque `checkoutUrl` e `loginUrl` pelos links reais
@@ -83,7 +83,10 @@ src/
 │   ├── layout/               # Navbar, Footer, Logo, StickyCta (CTA fixo mobile)
 │   ├── sections/             # Hero, Problem, Solution, HowItWorks, ProductDemo,
 │   │                         # Benefits, Pricing, Faq, FinalCta, SignalTicker
-│   ├── mockups/              # Dashboard e telas da plataforma (100% HTML/SVG, sem imagens)
+│   ├── mockups/              # Telas da plataforma (100% HTML/SVG, sem imagens):
+│   │                         # parts.tsx (chrome do app, sidebar, filtros, bandeiras SVG),
+│   │                         # DashboardMockup, ProductTableMockup, RankingMockup,
+│   │                         # OpportunityCardsMockup, FiltersMockup, ProductDetailMockup
 │   └── ui/                   # Button, Icon, Charts, Reveal, SectionHeading
 ├── data/products.ts          # dados de exemplo dos mockups
 └── lib/                      # site.ts (configuração) e utils.ts
@@ -92,15 +95,16 @@ src/
 ### Seções da página
 
 1. **Hero** — headline, CTAs e mockup de dashboard (produtos, métricas, ranking, MAX SCORE)
-2. **Ticker de sinais** — produtos em movimento em marquee
+2. **Números + ticker de sinais** — base monitorada e produtos em movimento
 3. **Problema** — as 4 dores + narrativa "falta inteligência de dados, não esforço"
 4. **Solução** — 6 cards: Produto em escala, GVM Max, Criadores, Vídeos, MAX SCORE, Link TikTok Shop
 5. **Como funciona** — 3 passos
-6. **Demonstração** — abas: Dashboard, Lista de produtos, Página do produto, Métricas
-7. **Benefícios** — 5 cards
-8. **Planos** — Mensal R$19/mês, Semestral R$79 (Mais escolhido), Anual R$120 (Melhor valor)
-9. **FAQ** — acordeão com 4 perguntas
-10. **CTA final** — "Pare de procurar oportunidades no escuro."
+6. **Demonstração interativa** — abas: Dashboard, Tabela de produtos, Ranking MAX SCORE e Página do produto
+7. **Recursos** — filtros por categoria/país, cards de oportunidade e grade de capacidades
+8. **Benefícios** — 5 cards
+9. **Planos** — Mensal R$19/mês, Semestral R$79 (Mais escolhido), Anual R$120 (Melhor valor)
+10. **FAQ** — acordeão com 4 perguntas
+11. **CTA final** — "Pare de procurar oportunidades no escuro."
 
 ---
 
